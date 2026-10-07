@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Box</title>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
+
 <body>
 
-    
-    
+    <div
+        class="bg-white/10 p-8 text-white flex flex-col gap-8 rounded-3xl border-[0.5px] border-white/30 backdrop-blur-md">
+        <h2 class="text-2xl font-bold">Click button to open modal box.</h2>
+        <button
+            class="open-btn shadow-[0_0_15px_#00000030] hover:shadow-[0_0_15px_#00000050] hover:bg-[linear-gradient(135deg,_#29457f_0%,_#3f65b8_50%,_#604fa5_100%)] font-medium px-3 py-2.5 rounded-2xl bg-[linear-gradient(135deg,_#35569a_0%,_#4f7be0_50%,_#715cc4_100%)]">Open
+            Modal Box</button>
+    </div>
+
+    <!-- Modal Box -->
+
+    <div
+        class="modal pointer-events-none opacity-0 fixed inset-0 bg-black/50 flex items-center justify-center transition-all duration-200">
+        <div
+            class="bg-white p-3 w-[380px] rounded-2xl shadow-[0_0_20px_#00000090] modal-box scale-75 opacity-0 transition-all duration-300">
+            <div class="flex items-center justify-between mb-8">
+                <div class="w-7"></div>
+                <h2 class="text-2xl font-bold">
+                    Hi Body👋🏼
+                </h2>
+
+                <button
+                    class="close-btn transition-all duration-200 w-9 h-9 rounded-full hover:bg-black/10 flex items-center justify-center font-[Arial] text-[24px] p-0">
+                    ×
+                </button>
+            </div>
+            <p class="text-center">This is a simple modal box built using vanilla JavaScript and Tailwind CSS.</p>
+        </div>
+    </div>
+
+    <script src="./src/main.js"></script>
 </body>
+
 </html>
